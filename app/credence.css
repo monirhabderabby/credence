@@ -1,0 +1,62 @@
+/* Homepage-only rules. Existing shadcn tokens and global styles are preserved. */
+@font-face {
+  font-family: "Credence Inter";
+  src: url("/credence/fonts/inter.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Credence Outfit";
+  src: url("/credence/fonts/outfit.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+.credence-home, .credence-booking {
+  font-family: "Credence Inter", Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
+  background: #fdfdfd;
+}
+.credence-home :is(h1,h2,h3,h4,h5,h6), .credence-home .font-outfit,
+.credence-booking :is(h1,h2,h3,h4,h5,h6) {
+  font-family: "Credence Outfit", Arial, Helvetica, sans-serif;
+}
+/* The reference's unlayered heading rule overrides its font-black utilities. */
+.credence-home :is(h1,h2,h3,h4,h5,h6), .credence-booking :is(h1,h2,h3,h4,h5,h6) { font-weight: 700; }
+.credence-home { width: 100%; }
+.credence-home section { scroll-margin-top: 120px; }
+.credence-home :is(button,summary), .credence-booking button { cursor: pointer; }
+.credence-home :is(a,button,summary):focus-visible, .credence-booking :focus-visible {
+  outline: 3px solid #d28a2d;
+  outline-offset: 5px;
+}
+.credence-skip { position: fixed; top: -100px; left: 24px; z-index: 110; background: #ffbc16; color: #3c2f21; padding: 12px 24px; border-radius: 24px; }
+.credence-skip:focus { top: 16px; }
+.credence-home summary { list-style: none; }
+.credence-home summary::-webkit-details-marker { display: none; }
+.credence-mask { mask-image: linear-gradient(transparent,black 10%,black 90%,transparent); }
+.credence-marquee { animation: credence-marquee 20s linear infinite; }
+.credence-marquee-1 { animation-duration: 25s; animation-direction: reverse; }
+.credence-marquee-2 { animation-duration: 22s; }
+.credence-marquee-3 { animation-duration: 40s; }
+@keyframes credence-marquee { to { transform: translateY(-50%); } }
+.credence-slide { animation: credence-slide .4s ease-in-out; }
+@keyframes credence-slide { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+.credence-home [data-reveal] { transition: opacity .7s ease, transform .7s ease, filter .7s ease; }
+.credence-home .credence-awaiting { opacity: 0; filter: blur(6px); transform: translateY(25px); }
+.credence-booking { padding: 0; border: 1px solid #3c2f211a; border-radius: 24px; width: min(896px,calc(100vw - 32px)); max-height: 90dvh; box-shadow: 0 25px 50px -12px #0004; }
+.credence-booking::backdrop { background: #0006; backdrop-filter: blur(4px); }
+.credence-booking input:not([type=radio]), .credence-booking select { display: block; width: 100%; padding: 16px 20px; margin-top: 8px; border: 1px solid #3c2f211a; border-radius: 16px; background: white; font-weight: 500; font-size: 16px; }
+.credence-booking label { display: block; font-size: 14px; font-weight: 700; color: #3c2f21cc; }
+.credence-booking input[type=radio] { accent-color: #ffbc16; width: 20px; height: 20px; margin-right: 16px; }
+.credence-booking .credence-choice { display: flex; align-items: start; padding: 20px; border: 1px solid #3c2f211a; border-radius: 16px; background: white; cursor: pointer; font-size: 16px; }
+.credence-booking .credence-choice:has(:checked) { border-color: #ffbc16; background: #ffbc160d; }
+html:has(.credence-booking[open], .credence-mobile-menu[open]) { overflow: hidden; }
+@media (hover: hover) {
+  .credence-home #gap .grid > div:hover { transform: translateY(-10px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .credence-home *, .credence-home *::before, .credence-home *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .credence-home .credence-awaiting { opacity: 1; filter: none; transform: none; }
+}
