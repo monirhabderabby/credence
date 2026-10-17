@@ -1,0 +1,61 @@
+[
+  {
+    "purpose": "logo",
+    "source": "https://www.growwithcredence.com/credence-logo.png",
+    "local": "public/credence/credence-logo.png",
+    "status": "verified",
+    "bytes": 17573,
+    "width": 888,
+    "height": 352
+  },
+  {
+    "purpose": "founder portrait",
+    "source": "https://www.growwithcredence.com/blossom-headshot.webp",
+    "local": "public/credence/blossom-headshot.webp",
+    "status": "verified",
+    "bytes": 45474,
+    "width": 769,
+    "height": 1024
+  },
+  {
+    "purpose": "marketing ranking",
+    "source": "https://www.growwithcredence.com/favikon/cropped/image-2-blurred.jpg",
+    "local": "public/credence/favikon/cropped/image-2-blurred.jpg",
+    "status": "verified",
+    "bytes": 46605,
+    "width": 885,
+    "height": 500
+  },
+  {
+    "purpose": "all categories ranking",
+    "source": "https://www.growwithcredence.com/favikon/cropped/image-1.jpg",
+    "local": "public/credence/favikon/cropped/image-1.jpg",
+    "status": "verified",
+    "bytes": 45895,
+    "width": 858,
+    "height": 490
+  },
+  {
+    "purpose": "LinkedIn ranking",
+    "source": "https://www.growwithcredence.com/favikon/cropped/image-3-blurred.jpg",
+    "local": "public/credence/favikon/cropped/image-3-blurred.jpg",
+    "status": "verified",
+    "bytes": 39461,
+    "width": 756,
+    "height": 480
+  },
+  {
+    "purpose": "Inter",
+    "source": "https://www.growwithcredence.com/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+    "local": "public/credence/fonts/inter.woff2",
+    "status": "verified",
+    "bytes": 48432
+  },
+  {
+    "purpose": "Outfit",
+    "source": "https://www.growwithcredence.com/_next/static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2",
+    "local": "public/credence/fonts/outfit.woff2",
+    "status": "verified",
+    "bytes": 32228
+  }
+]
